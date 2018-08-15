@@ -13,6 +13,7 @@ module.exports = (agenda, options) => {
     
     return require('./lib/middlewares/express')(agendash);
   } catch (err) {
+    console.log('No middleware available for ');
     throw new Error('No middleware available for ' + options.middleware);
   }
 };
