@@ -10,7 +10,7 @@ module.exports = (agenda, options) => {
   const agendash = require('./lib/agendash')(agenda, options);
 
   try {
-    
+    console.log("startup agendadash");
     return require('./lib/middlewares/express')(agendash);
   } catch (err) {
     console.log('No middleware available for ');
